@@ -1,7 +1,7 @@
 'use strict';
 
 import MainComponent from './main.component';
-
+import './main.scss';
 const mainPageModule = angular.module('main-module', [
     'ui.router'
 ])

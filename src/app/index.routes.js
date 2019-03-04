@@ -1,20 +1,20 @@
+/* eslint-disable no-console */
 'use strict';
 
 
-import asyncTemplate from '!!file-loader?name=templates/[name].[ext]!./pages/async-page-example/async.html';
-
+import converterTempl from '!!file-loader?name=templates/[name].[ext]!./pages/converter/сonverter.html';
 
 function routeConfig($urlRouterProvider, $stateProvider, resolverProvider) {
   'ngInject';
 
 
     $stateProvider
-        .state('async', {
-          url: '/async',
-          templateUrl: asyncTemplate,
-          controller: 'asyncController',
+        .state('converter', {
+          url: '/converter',
+          templateUrl: converterTempl,
+          controller: 'converterController',
           resolve: {
-            asyncPreloading: resolverProvider.asyncPagePrealoading
+            asyncPreloading: resolverProvider.converterPagePrealoading
           }
         });
 
